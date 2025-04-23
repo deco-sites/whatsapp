@@ -2,6 +2,7 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/phone/buyPhoneNumber.ts";
 import * as $$$$$$$$$$$0 from "./apps/deco/htmx.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$$$$0 from "./sections/Footer.tsx";
@@ -13,6 +14,9 @@ const manifest = {
     "site/sections/Footer.tsx": $$$$$$0,
     "site/sections/ItWorks.tsx": $$$$$$1,
     "site/sections/Theme/Theme.tsx": $$$$$$2,
+  },
+  "actions": {
+    "site/actions/phone/buyPhoneNumber.ts": $$$$$$$$$0,
   },
   "apps": {
     "site/apps/deco/htmx.ts": $$$$$$$$$$$0,

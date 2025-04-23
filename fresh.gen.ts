@@ -3,14 +3,28 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-
+import * as $_middleware from "./routes/_middleware.ts";
+import * as $api_auth_signout from "./routes/api/auth/signout.ts";
+import * as $dashboard_index from "./routes/dashboard/index.tsx";
+import * as $index from "./routes/index.tsx";
+import * as $login_index from "./routes/login/index.tsx";
+import * as $login_success_redirect_ from "./routes/login/success/[...redirect].tsx";
+import * as $AuthListener from "./islands/AuthListener.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
+    "./routes/_middleware.ts": $_middleware,
+    "./routes/api/auth/signout.ts": $api_auth_signout,
+    "./routes/dashboard/index.tsx": $dashboard_index,
+    "./routes/index.tsx": $index,
+    "./routes/login/index.tsx": $login_index,
+    "./routes/login/success/[...redirect].tsx": $login_success_redirect_,
   },
-  islands: {},
+  islands: {
+    "./islands/AuthListener.tsx": $AuthListener,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 
